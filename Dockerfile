@@ -29,8 +29,9 @@ EXPOSE 80
 # FROM mber5/broadway-baseimage:latest
 ENV HOSTS="[]" \
   APP_TITLE='Virtual Machine Manager' \
-  FAVICON_URL='https://raw.githubusercontent.com/virt-manager/virt-manager/931936a328d22413bb663e0e21d2f7bb111dbd7c/data/icons/256x256/apps/virt-manager.png' \
-  CORNER_IMAGE_URL='https://raw.githubusercontent.com/virt-manager/virt-manager/931936a328d22413bb663e0e21d2f7bb111dbd7c/data/icons/256x256/apps/virt-manager.png'
+  # https://raw.githubusercontent.com/virt-manager/virt-manager/931936a328d22413bb663e0e21d2f7bb111dbd7c/data/icons/256x256/apps/virt-manager.png
+  FAVICON_URL='https://gitee.com/g-system/fk-mbers-docker-virt-manager/raw/sam-custom/virt-manager.png' \
+  CORNER_IMAGE_URL='https://gitee.com/g-system/fk-mbers-docker-virt-manager/raw/sam-custom/virt-manager.png'
 
 RUN apt-get update; \
   apt-get install -y --no-install-recommends virt-manager dbus-x11 libglib2.0-bin gir1.2-spiceclientgtk-3.0 ssh at-spi2-core; \
