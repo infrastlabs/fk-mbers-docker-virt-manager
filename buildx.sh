@@ -21,8 +21,8 @@ function doBuildx(){
     # cimg="docker-hdmi-desktop-cache:$tag"
     cimg="$img-cache"
     
-    plat="--platform linux/amd64,linux/arm64" #,linux/arm
-    plat="--platform linux/ppc64le" #dbg
+    plat="--platform linux/amd64,linux/arm64,linux/ppc64le" #,linux/arm
+    # plat="--platform linux/ppc64le" #dbg
 
     compile="alpine-compile"; builddate=$(date +%Y-%m-%d_%H:%M:%S)
     # test "$plat" != "--platform linux/amd64,linux/arm64,linux/arm" && compile="${compile}-dbg"
