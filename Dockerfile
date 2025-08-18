@@ -15,7 +15,9 @@ RUN apt-get update; \
   rm -rf /usr/share/themes/Materia && mv /usr/share/themes/Materia-light /usr/share/themes/Materia
 
 RUN \
-  wget --no-check-certificate -O /usr/bin/ttyd "https://github.com/tsl0922/ttyd/releases/latest/download/ttyd.$(uname -m)"; \
+  # root@8d898b08a91f:/# ttyd -v  ##ttyd version 1.6.3-3b174da  ###latest:1.7.7@Mar 30, 2024 >> ttyd.web操作时不能input??
+  # wget --no-check-certificate -O /usr/bin/ttyd "https://github.com/tsl0922/ttyd/releases/latest/download/ttyd.$(uname -m)"; \
+  wget --no-check-certificate -O /usr/bin/ttyd "https://github.com/tsl0922/ttyd/releases/1.6.3/download/ttyd.$(uname -m)"; \
   chmod +x /usr/bin/ttyd
 
 COPY conf/start.sh /usr/local/bin/start
